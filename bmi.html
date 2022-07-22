@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="style.css" rel="stylesheet" />
+    <script src="calculation.js"></script>
+
+    <title>BMI Calculator</title>
+  </head>
+
+  <body class="containerA">
+    <p class="P">Body Mass Index</p>
+
+    <p class="container0">
+      <strong>Body Mass Index (BMI)</strong> is a measure of the amount of fat
+      in a human body. It is a single numeric value with the following
+      interpretation:
+    </p>
+
+    <table>
+      <tr>
+        <th class="container1H">Underweight</th>
+        <td class="container1H">Less than 18</td>
+      </tr>
+      <tr>
+        <th class="container1H">Weight</th>
+        <td class="container1H">18-25</td>
+      </tr>
+      <tr>
+        <th class="container1H">Overweight</th>
+        <td class="container1H">25-30</td>
+      </tr>
+      <tr>
+        <th class="container1H">Over 30</th>
+        <td class="container1H">More than 30</td>
+      </tr>
+    </table>
+    <p class="lastP">Use the calculator to calculate your BMI.</p>
+
+    <form>
+      <label class="Height">Height</label><br />
+      <input type="text" class="Input" id="theight" />
+      <br />
+      <label class="CM" id="heighth">Height in centimeters.</label> <br /><br />
+      <label class="Weight">Weight</label><br />
+      <input type="text" class="Input" id="tweight" /><br />
+      <label class="KG" id="weighth">Weight in kilograms.</label><br /><br />
+      <select id="option" class="BMI" onchange="selectOption()">
+        <option>Metric</option>
+        <option>Imperial</option></select
+      ><br />
+      <input type="button" class="button" onClick="bmi()" value="Calculate" />
+    </form>
+
+    <p id="result"></p>
+  </body>
+</html>
